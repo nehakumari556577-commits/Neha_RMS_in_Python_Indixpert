@@ -1,0 +1,50 @@
+[
+    {
+        "order_id": 1,
+        "staff_name": "kriti",
+        "timestamp": "2026-03-24 12:31:45",
+        "items": [
+            {
+                "item_id": 4,
+                "name": "Veg Pulao",
+                "size": "Half",
+                "price": 60,
+                "quantity": 3,
+                "total": 180
+            }
+        ],
+        "total": 180
+    },
+    {
+        "order_id": 2,
+        "staff_name": "nehakumari",
+        "timestamp": "2026-03-24 13:01:18",
+        "items": [
+            {
+                "item_id": 2,
+                "name": "Dal Fry",
+                "size": "Half",
+                "price": 40,
+                "quantity": 4,
+                "total": 160
+            }
+        ],
+        "total": 160
+    },
+    {
+        "order_id": 3,
+        "staff_name": "goldy",
+        "timestamp": "2026-03-24 13:09:54",
+        "items": [
+            {
+                "item_id": 7,
+                "name": "Rajma Chawal",
+                "size": "Half",
+                "price": 60,
+                "quantity": 4,
+                "total": 240
+            }
+        ],
+        "total": 240
+    }
+]

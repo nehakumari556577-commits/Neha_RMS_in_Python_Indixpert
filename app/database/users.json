@@ -1,0 +1,16 @@
+[
+    {
+        "user_id": "8f7a373c-1f8f-4cee-8f82-8cc8e360419b",
+        "name": "nehakumari",
+        "email": "nrha@gmail.com",
+        "password": "neha123",
+        "role": "staff"
+    },
+    {
+        "user_id": "b8a23bbc-892c-47af-b509-e8a59efcc657",
+        "name": "goldy",
+        "email": "goldy@gmail.com",
+        "password": "goldy123",
+        "role": "staff"
+    }
+]
