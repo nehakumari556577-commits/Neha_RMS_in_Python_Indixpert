@@ -1,51 +1,31 @@
-import json
+from app.database.data import data
+from app.logs.logger import Logger
 
-class DeleteItem:
+class DeleteMenuItem:
 
     def __init__(self):
-        self.file = "app/database/menu.json"
-        self.order_file = "app/database/orders.json"
+        self.data = data()
+        self.menu_file = "app/database/menu.json"
+        self.logger = Logger()  
 
-    def delete(self):
+    def delete_item(self):
         try:
-            with open(self.file, "r") as f:
-                menu = json.load(f)
-        except:
-            print("Menu not found!")
-            return
+            menu = self.data.read(self.menu_file) or []
 
-        if not menu:
-            print("Menu is empty!")
-            return
+            try:
+                item_id = int(input("Enter Item ID to delete: "))
+            except ValueError:
+                print("Invalid ID. Must be a number!")
+                return
 
-        print("\n===== DELETE ITEM =====")
+            new_menu = [item for item in menu if item["id"] != item_id]
 
-        for item in menu:
-            print(f"{item['id']}. {item['name']} - ₹{item['half_price']}/₹{item['full_price']} ({item['category']})")
-
-        item_id = input("Enter Item ID to delete: ")
-
-        if not item_id.isdigit():
-            print("Invalid ID!")
-            return
-
-        item_id = int(item_id)
-
-        found = False
-        new_menu = []
-
-        for item in menu:
-            if item["id"] == item_id:
-                found = True
-                print(f"Deleting: {item['name']}")
+            if len(menu) == len(new_menu):
+                print("Item not found!")
             else:
-                new_menu.append(item)
+                self.data.write(self.menu_file, new_menu)
+                print("Item Deleted Successfully!")
 
-        if not found:
-            print("Item not found!")
-            return
-        
-        with open(self.file, "w") as f:
-            json.dump(new_menu, f, indent=4)
-
-        print("Item Deleted Successfully!")
+        except Exception as e:
+            self.logger.log_error(f"DeleteMenuItem Error: {str(e)}")
+            print("An error occurred. Check log for details.")

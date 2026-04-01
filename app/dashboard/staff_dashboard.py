@@ -1,57 +1,73 @@
 from app.database.data import data
 from app.menu.view_menu import ViewMenu
-
 from app.order.create_order import CreateOrder
-from app.order.order_history import OrderHistory
+from app.order.view_orders import ViewOrder
+from app.billing.generate_bill import GenerateBill
+from app.booking.create_booking import CreateBooking
+from app.logs.logger import Logger
 
 
 class StaffDashboard:
 
     def __init__(self, user):
         self.user = user
-        self.menu_data = data()
-        self.menu_file = "app/database/menu.json"
-        self.order_file = "app/database/orders.json"
-    
+        self.data = data()
+        self.logger = Logger() 
+
         self.view_menu_obj = ViewMenu()
-        self.order_obj = CreateOrder()        
-        self.history_obj = OrderHistory()     
+        self.create_order_obj = CreateOrder()
+        self.view_order_obj = ViewOrder()
+        self.generate_bill_obj = GenerateBill()
+        self.create_booking_obj = CreateBooking()
 
     def start(self):
         while True:
             try:
-                print("\n===== STAFF DASHBOARD =====")
-                print("Welcome", self.user["name"])
-                print("1 View Menu")
-                print("2 Take Order")
-                print("3 View Orders")
-                print("4 Logout")
+                print("\n" + "=" * 70)
+                print("STAFF DASHBOARD".center(70))
+                print("=" * 70)
 
-                choice = input("Enter choice: ")
+                print(f"User : {self.user.get('name', 'Staff')}")
+                print("-" * 70)
+
+                print("1. Create Booking")
+                print("2. View Menu")
+                print("3. Take Order")
+                print("4. View Orders")
+                print("5. Generate Bill")
+                print("6. Logout")
+                print("-" * 70)
+
+                choice = input("Enter choice: ").strip()
 
                 if not choice.isdigit():
-                    print("Invalid Input")
+                    print("Invalid input. Enter a number between 1-6.")
                     continue
 
                 choice = int(choice)
 
                 if choice == 1:
-                    self.view_menu_obj.show()
+                    self.create_booking_obj.create()
 
                 elif choice == 2:
-                    order = self.order_obj.create(self.user["name"])
-                    if order:
-                        print("Order Created Successfully!")
+                    self.view_menu_obj.show_menu()
 
                 elif choice == 3:
-                    self.history_obj.show_orders() 
+                    self.create_order_obj.create(self.user["name"])
 
                 elif choice == 4:
+                    self.view_order_obj.view_orders()
+
+                elif choice == 5:
+                    self.generate_bill_obj.generate()
+
+                elif choice == 6:
                     print("Logging out...")
                     break
 
                 else:
-                    print("Invalid Choice")
+                    print("Invalid choice. Enter a number between 1-6.")
 
             except Exception as e:
-                print("Error:", e)
+                self.logger.log_error(f"StaffDashboard Error: {str(e)}")
+                print("Error occurred. Check log.")

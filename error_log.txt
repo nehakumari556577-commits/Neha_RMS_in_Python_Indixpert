@@ -1,0 +1,30 @@
+[2026-04-01 00:02:28] Test error message
+[2026-04-01 05:31:03] Test error message
+[2026-04-01 05:31:17] Test error message
+
+============================================================
+Date & Time : 2026-04-01 05:42:02.605007
+File Name   : d:\Neha_RMS_in_Python_Indixpert\app\logs\logger.py
+Function    : <module>
+Line No     : 31
+Error Type  : ValueError
+Message     : invalid literal for int() with base 10: 'abc'
+============================================================
+
+============================================================
+Date & Time : 2026-04-01 05:42:46.552176
+File Name   : d:\Neha_RMS_in_Python_Indixpert\app\logs\logger.py
+Function    : <module>
+Line No     : 31
+Error Type  : ValueError
+Message     : invalid literal for int() with base 10: 'abc'
+============================================================
+
+============================================================
+Date & Time : 2026-04-01 05:45:30.987482
+File Name   : d:\Neha_RMS_in_Python_Indixpert\app\logs\logger.py
+Function    : <module>
+Line No     : 31
+Error Type  : ValueError
+Message     : invalid literal for int() with base 10: 'abc'
+============================================================

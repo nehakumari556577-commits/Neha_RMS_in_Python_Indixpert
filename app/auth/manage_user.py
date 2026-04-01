@@ -9,14 +9,16 @@ login_obj = Login()
 def manage_menu():
 
     while True:
-        print('-'*40)
-        print("\n===== RESTAURANT MANAGEMENT SYSTEM =====")
-        print("1 Signup")
-        print("2 Login")
-        print("3 Exit")
-        print('-'*40)
+        print("="*50)
+        print("   RESTAURANT MANAGEMENT SYSTEM   ")
+        print("="*50)
 
-        choice = input("Please Enter Your Choice: ")
+        print("1. Signup")
+        print("2. Login")
+        print("3. Exit")
+        print("-"*50)
+
+        choice = input("Enter Your Choice: ")
 
         if not choice.isdigit():
             print("Invalid input")
@@ -30,18 +32,21 @@ def manage_menu():
         elif choice == 2: 
             user = login_obj.login()
 
-            if user:  
+            if user: 
+                print("-"*50)
 
                 if user["role"] == "admin":
+                    print("Admin Login Successful")
                     admin = AdminDashboard(user)
                     admin.start()
 
                 elif user["role"] == "staff":
+                    print("Staff Login Successful")
                     staff = StaffDashboard(user) 
                     staff.start()
 
             else:
-                print("Invalid Email or Password!")
+                print("Invalid Email or Password")
 
         elif choice == 3:
             print("Exiting...")

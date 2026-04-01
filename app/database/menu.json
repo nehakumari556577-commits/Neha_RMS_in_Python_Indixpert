@@ -1,73 +1,338 @@
 [
-    {"id": 1, "name": "Rice", "half_price": 30, "full_price": 50, "category": "Lunch"},
-    {"id": 2, "name": "Dal Fry", "half_price": 40, "full_price": 60, "category": "Lunch"},
-    {"id": 3, "name": "Jeera Rice", "half_price": 50, "full_price": 70, "category": "Lunch"},
-    {"id": 4, "name": "Veg Pulao", "half_price": 60, "full_price": 80, "category": "Lunch"},
-    {"id": 5, "name": "Paneer Curry", "half_price": 80, "full_price": 120, "category": "Lunch"},
-
-    {"id": 6, "name": "Chole Bhature", "half_price": 60, "full_price": 90, "category": "Lunch"},
-    {"id": 7, "name": "Rajma Chawal", "half_price": 60, "full_price": 85, "category": "Lunch"},
-    {"id": 8, "name": "Veg Thali", "half_price": 70, "full_price": 100, "category": "Lunch"},
-    {"id": 9, "name": "Chicken Curry", "half_price": 100, "full_price": 150, "category": "Lunch"},
-    {"id": 10, "name": "Egg Curry", "half_price": 70, "full_price": 110, "category": "Lunch"},
-
-    {"id": 11, "name": "Roti", "half_price": 5, "full_price": 10, "category": "Dinner"},
-    {"id": 12, "name": "Butter Roti", "half_price": 10, "full_price": 15, "category": "Dinner"},
-    {"id": 13, "name": "Naan", "half_price": 15, "full_price": 25, "category": "Dinner"},
-    {"id": 14, "name": "Butter Naan", "half_price": 20, "full_price": 30, "category": "Dinner"},
-    {"id": 15, "name": "Tandoori Roti", "half_price": 10, "full_price": 20, "category": "Dinner"},
-
-    {"id": 16, "name": "Paneer Butter Masala", "half_price": 100, "full_price": 160, "category": "Dinner"},
-    {"id": 17, "name": "Kadai Paneer", "half_price": 100, "full_price": 150, "category": "Dinner"},
-    {"id": 18, "name": "Mix Veg", "half_price": 70, "full_price": 100, "category": "Dinner"},
-    {"id": 19, "name": "Aloo Gobi", "half_price": 60, "full_price": 90, "category": "Dinner"},
-    {"id": 20, "name": "Dal Makhani", "half_price": 80, "full_price": 120, "category": "Dinner"},
-
-    {"id": 21, "name": "Chicken Biryani", "half_price": 120, "full_price": 180, "category": "Dinner"},
-    {"id": 22, "name": "Veg Biryani", "half_price": 100, "full_price": 140, "category": "Dinner"},
-    {"id": 23, "name": "Egg Biryani", "half_price": 110, "full_price": 150, "category": "Dinner"},
-    {"id": 24, "name": "Fried Rice", "half_price": 70, "full_price": 110, "category": "Dinner"},
-    {"id": 25, "name": "Hakka Noodles", "half_price": 80, "full_price": 120, "category": "Dinner"},
-
-    {"id": 26, "name": "Chowmein", "half_price": 70, "full_price": 100, "category": "Dinner"},
-    {"id": 27, "name": "Manchurian", "half_price": 90, "full_price": 130, "category": "Dinner"},
-    {"id": 28, "name": "Spring Roll", "half_price": 60, "full_price": 90, "category": "Dinner"},
-    {"id": 29, "name": "Chilli Paneer", "half_price": 90, "full_price": 140, "category": "Dinner"},
-    {"id": 30, "name": "Chilli Chicken", "half_price": 110, "full_price": 160, "category": "Dinner"},
-
-    {"id": 31, "name": "Masala Dosa", "half_price": 50, "full_price": 80, "category": "Lunch"},
-    {"id": 32, "name": "Plain Dosa", "half_price": 40, "full_price": 60, "category": "Lunch"},
-    {"id": 33, "name": "Idli Sambhar", "half_price": 30, "full_price": 50, "category": "Lunch"},
-    {"id": 34, "name": "Vada Sambhar", "half_price": 40, "full_price": 60, "category": "Lunch"},
-    {"id": 35, "name": "Upma", "half_price": 25, "full_price": 40, "category": "Lunch"},
-
-    {"id": 36, "name": "Poha", "half_price": 20, "full_price": 30, "category": "Lunch"},
-    {"id": 37, "name": "Paratha", "half_price": 25, "full_price": 40, "category": "Lunch"},
-    {"id": 38, "name": "Aloo Paratha", "half_price": 30, "full_price": 50, "category": "Lunch"},
-    {"id": 39, "name": "Paneer Paratha", "half_price": 50, "full_price": 70, "category": "Lunch"},
-    {"id": 40, "name": "Curd", "half_price": 20, "full_price": 30, "category": "Lunch"},
-
-    {"id": 41, "name": "Tea", "half_price": 5, "full_price": 10, "category": "Dinner"},
-    {"id": 42, "name": "Coffee", "half_price": 10, "full_price": 20, "category": "Dinner"},
-    {"id": 43, "name": "Cold Drink", "half_price": 20, "full_price": 30, "category": "Dinner"},
-    {"id": 44, "name": "Lassi", "half_price": 25, "full_price": 40, "category": "Dinner"},
-    {"id": 45, "name": "Butter Milk", "half_price": 20, "full_price": 30, "category": "Dinner"},
-
-    {"id": 46, "name": "Ice Cream", "half_price": 30, "full_price": 50, "category": "Dinner"},
-    {"id": 47, "name": "Gulab Jamun", "half_price": 20, "full_price": 40, "category": "Dinner"},
-    {"id": 48, "name": "Rasgulla", "half_price": 20, "full_price": 40, "category": "Dinner"},
-    {"id": 49, "name": "Halwa", "half_price": 40, "full_price": 60, "category": "Dinner"},
-    {"id": 50, "name": "Kheer", "half_price": 50, "full_price": 70, "category": "Dinner"},
-
-    {"id": 51, "name": "Bread Butter", "half_price": 20, "full_price": 40, "category": "Breakfast"},
-    {"id": 52, "name": "Bread Jam", "half_price": 20, "full_price": 40, "category": "Breakfast"},
-    {"id": 53, "name": "Omelette", "half_price": 30, "full_price": 50, "category": "Breakfast"},
-    {"id": 54, "name": "Boiled Eggs", "half_price": 20, "full_price": 40, "category": "Breakfast"},
-    {"id": 55, "name": "Maggi", "half_price": 30, "full_price": 50, "category": "Breakfast"},
-
-    {"id": 56, "name": "Cornflakes Milk", "half_price": 40, "full_price": 60, "category": "Breakfast"},
-    {"id": 57, "name": "Sandwich", "half_price": 40, "full_price": 70, "category": "Breakfast"},
-    {"id": 58, "name": "Veg Sandwich", "half_price": 50, "full_price": 80, "category": "Breakfast"},
-    {"id": 59, "name": "Paneer Sandwich", "half_price": 60, "full_price": 90, "category": "Breakfast"},
-    {"id": 60, "name": "Milk", "half_price": 20, "full_price": 30, "category": "Breakfast"}
+    {
+        "id": 4,
+        "name": "chilli paneer",
+        "half_price": 200,
+        "full_price": 250,
+        "category": "Lunch",
+        "type": "veg"
+    },
+    {
+        "id": 5,
+        "name": "chhole bhature",
+        "half_price": 20,
+        "full_price": 40,
+        "category": "Lunch",
+        "type": "veg"
+    },
+    {
+        "id": 6,
+        "name": "Chole Bhature",
+        "half_price": 60,
+        "full_price": 90,
+        "category": "Lunch",
+        "type": "veg"
+    },
+    {
+        "id": 7,
+        "name": "Rajma Chawal",
+        "half_price": 60,
+        "full_price": 85,
+        "category": "Lunch",
+        "type": "veg"
+    },
+    {
+        "id": 8,
+        "name": "Veg Thali",
+        "half_price": 70,
+        "full_price": 100,
+        "category": "Lunch",
+        "type": "veg"
+    },
+    {
+        "id": 9,
+        "name": "Chicken Curry",
+        "half_price": 100,
+        "full_price": 150,
+        "category": "Lunch",
+        "type": "non-veg"
+    },
+    {
+        "id": 10,
+        "name": "Egg Curry",
+        "half_price": 70,
+        "full_price": 110,
+        "category": "Lunch",
+        "type": "non-veg"
+    },
+    {
+        "id": 11,
+        "name": "Roti",
+        "half_price": 5,
+        "full_price": 10,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 12,
+        "name": "Butter Roti",
+        "half_price": 10,
+        "full_price": 15,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 14,
+        "name": "Butter Naan",
+        "half_price": 20,
+        "full_price": 30,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 15,
+        "name": "Tandoori Roti",
+        "half_price": 10,
+        "full_price": 20,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 16,
+        "name": "Paneer Butter Masala",
+        "half_price": 100,
+        "full_price": 160,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 17,
+        "name": "Kadai Paneer",
+        "half_price": 100,
+        "full_price": 150,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 18,
+        "name": "Mix Veg",
+        "half_price": 70,
+        "full_price": 100,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 19,
+        "name": "Aloo Gobi",
+        "half_price": 60,
+        "full_price": 90,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 20,
+        "name": "Dal Makhani",
+        "half_price": 80,
+        "full_price": 120,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 21,
+        "name": "Chicken Biryani",
+        "half_price": 120,
+        "full_price": 180,
+        "category": "Dinner",
+        "type": "non-veg"
+    },
+    {
+        "id": 22,
+        "name": "Veg Biryani",
+        "half_price": 100,
+        "full_price": 140,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 23,
+        "name": "Egg Biryani",
+        "half_price": 110,
+        "full_price": 150,
+        "category": "Dinner",
+        "type": "non-veg"
+    },
+    {
+        "id": 24,
+        "name": "Fried Rice",
+        "half_price": 70,
+        "full_price": 110,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 25,
+        "name": "Hakka Noodles",
+        "half_price": 80,
+        "full_price": 120,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 26,
+        "name": "Chowmein",
+        "half_price": 70,
+        "full_price": 100,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 27,
+        "name": "Manchurian",
+        "half_price": 90,
+        "full_price": 130,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 28,
+        "name": "Spring Roll",
+        "half_price": 60,
+        "full_price": 90,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 29,
+        "name": "Chilli Paneer",
+        "half_price": 90,
+        "full_price": 140,
+        "category": "Dinner",
+        "type": "veg"
+    },
+    {
+        "id": 30,
+        "name": "Chilli Chicken",
+        "half_price": 110,
+        "full_price": 160,
+        "category": "Dinner",
+        "type": "non-veg"
+    },
+    {
+        "id": 51,
+        "name": "Bread Butter",
+        "half_price": 20,
+        "full_price": 40,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 52,
+        "name": "Bread Jam",
+        "half_price": 20,
+        "full_price": 40,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 53,
+        "name": "Omelette",
+        "half_price": 30,
+        "full_price": 50,
+        "category": "Breakfast",
+        "type": "non-veg"
+    },
+    {
+        "id": 54,
+        "name": "Boiled Eggs",
+        "half_price": 20,
+        "full_price": 40,
+        "category": "Breakfast",
+        "type": "non-veg"
+    },
+    {
+        "id": 55,
+        "name": "Maggi",
+        "half_price": 30,
+        "full_price": 50,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 56,
+        "name": "Cornflakes Milk",
+        "half_price": 40,
+        "full_price": 60,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 57,
+        "name": "Sandwich",
+        "half_price": 40,
+        "full_price": 70,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 58,
+        "name": "Veg Sandwich",
+        "half_price": 50,
+        "full_price": 80,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 59,
+        "name": "Paneer Sandwich",
+        "half_price": 60,
+        "full_price": 90,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 60,
+        "name": "Milk",
+        "half_price": 20,
+        "full_price": 30,
+        "category": "Breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 61,
+        "name": "Naan",
+        "half_price": 15,
+        "full_price": 25,
+        "category": "dinner",
+        "type": "veg"
+    },
+    {
+        "id": 62,
+        "name": "veg thali",
+        "half_price": 20,
+        "full_price": 30,
+        "category": "lunch",
+        "type": "veg"
+    },
+    {
+        "id": 63,
+        "name": "butter naan",
+        "half_price": 20,
+        "full_price": 30,
+        "category": "dinner menu",
+        "type": "veg"
+    },
+    {
+        "id": 64,
+        "name": "pizza",
+        "half_price": 2000,
+        "full_price": 400,
+        "category": "breakfast",
+        "type": "veg"
+    },
+    {
+        "id": 65,
+        "name": "curry paneer",
+        "half_price": 30,
+        "full_price": 50,
+        "category": "dinner",
+        "type": "veg"
+    },
+    {
+        "id": 66,
+        "name": "chhole bature",
+        "half_price": 50,
+        "full_price": 60,
+        "category": "dinner",
+        "type": "veg"
+    }
 ]

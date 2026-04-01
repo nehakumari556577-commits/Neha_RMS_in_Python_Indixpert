@@ -1,73 +1,47 @@
-import json
+from app.database.data import data
+from app.logs.logger import Logger
 
-class UpdateItem:
+class UpdateMenuItem:
 
     def __init__(self):
-        self.file = "app/database/menu.json"
-        self.order_file = "app/database/orders.json"
+        self.data = data()
+        self.menu_file = "app/database/menu.json"
+        self.logger = Logger()  
 
-    def update(self):
+    def update_item(self):
         try:
-            with open(self.file, "r") as f:
-                menu = json.load(f)
-        except:
-            print("Menu not found!")
-            return
+            menu = self.data.read(self.menu_file) or []
 
-        if not menu:
-            print("Menu is empty!")
-            return
+            try:
+                item_id = int(input("Enter Item ID to update: "))
+            except ValueError:
+                print("Invalid ID. Must be a number!")
+                return
 
-        print("\n===== UPDATE ITEM =====")
+            for item in menu:
+                if item["id"] == item_id:
 
-        for item in menu:
-            print(f"{item['id']}. {item['name']} - ₹{item['half_price']}/₹{item['full_price']} ({item['category']})")
+                    print(f"\nUpdating: {item['name']}")
 
-        
-        item_id = input("Enter Item ID to update: ")
+                    new_name = input("New Name (leave blank to skip): ").strip()
+                    new_half = input("New Half Price (leave blank to skip): ").strip()
+                    new_full = input("New Full Price (leave blank to skip): ").strip()
 
-        if not item_id.isdigit():
-            print("Invalid ID!")
-            return
+                    if new_name:
+                        item["name"] = new_name
 
-        item_id = int(item_id)
+                    if new_half.isdigit():
+                        item["half_price"] = int(new_half)
 
+                    if new_full.isdigit():
+                        item["full_price"] = int(new_full)
 
-        found = False
-        for item in menu:
-            if item["id"] == item_id:
-                found = True
+                    self.data.write(self.menu_file, menu)
+                    print("Item Updated Successfully!")
+                    return
 
-                print(f"\nUpdating: {item['name']}")
-
-                name = input("Enter new name (leave blank to keep same): ").strip()
-                if name:
-                    item["name"] = name
-
-                category = input("Enter new category (leave blank to keep same): ").strip()
-                if category:
-                    item["category"] = category
-
-                half_price = input("Enter new half price (leave blank to keep same): ")
-                if half_price:
-                    if half_price.isdigit():
-                        item["half_price"] = int(half_price)
-                    else:
-                        print("Invalid half price!")
-
-                full_price = input("Enter new full price (leave blank to keep same): ")
-                if full_price:
-                    if full_price.isdigit():
-                        item["full_price"] = int(full_price)
-                    else:
-                        print("Invalid full price!")
-
-                break
-
-        if not found:
             print("Item not found!")
-            return
-        with open(self.file, "w") as f:
-            json.dump(menu, f, indent=4)
 
-        print("Item Updated Successfully!")
+        except Exception as e:
+            self.logger.log_error(f"UpdateMenuItem Error: {str(e)}")
+            print("An error occurred. Check log for details.")

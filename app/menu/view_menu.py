@@ -1,66 +1,75 @@
 from app.database.data import data
+from app.logs.logger import Logger
 
 class ViewMenu:
 
     def __init__(self):
         self.data = data()
         self.menu_file = "app/database/menu.json"
-        self.order_file = "app/database/orders.json"
+        self.logger = Logger()  
 
-    def show(self):
+    def show_menu(self):
+        try:
+            menu = self.data.read(self.menu_file)
 
-        menu = self.data.read(self.menu_file)
+            if not menu:
+                print("Menu is empty")
+                return
 
-        if not menu:
-            print("Menu is empty!")
-            return
+            if not isinstance(menu, list):
+                print("Invalid menu data")
+                return
 
-        categories = {
-            "Breakfast": {"veg": [], "nonveg": []},
-            "Lunch": {"veg": [], "nonveg": []},
-            "Dinner": {"veg": [], "nonveg": []}
-        }
+            categories = ["Breakfast", "Lunch", "Dinner"]
 
-        for item in menu:
-            name = item["name"].lower()
+            print("\n" + "="*70)
+            print(" " * 25 + "RESTAURANT MENU")
+            print("="*70)
 
-            if "chicken" in name or "egg" in name:
-                food_type = "nonveg"
-            else:
-                food_type = "veg"
+            for category in categories:
+                print(f"\n {category.upper()} MENU")
+                print("-"*66)
 
-            category = item.get("category", "Lunch")
+                veg_items = [
+                    i for i in menu
+                    if i.get("category", "").lower() == category.lower()
+                    and i.get("type", "").lower() == "veg"
+                ]
 
-            if category in categories:
-                categories[category][food_type].append(item)
+                nonveg_items = [
+                    i for i in menu
+                    if i.get("category", "").lower() == category.lower()
+                    and i.get("type", "").lower() == "non-veg"
+                ]
 
-        print("\n" + "="*50)
-        print("        RESTAURANT MENU        ")
-        print("="*50)
+                if veg_items:
+                    print("\n VEG ITEMS")
+                    self.print_table(veg_items)
 
-        for cat, types in categories.items():
+                if nonveg_items:
+                    print("\n NON-VEG ITEMS")
+                    self.print_table(nonveg_items)
 
-            print(f"\n\n {cat.upper()} MENU ")
-            print("-"*50)
+        except Exception as e:
+            self.logger.log_error(f"ViewMenu.show_menu Error: {str(e)}")
+            print("Error in View Menu. Check log for details.")
 
+    def print_table(self, items):
+        try:
+            print("+----+----------------------+----------+----------+")
+            print("| ID | Item Name            | Half ₹   | Full ₹   |")
+            print("+----+----------------------+----------+----------+")
 
-            print("\n----VEG ITEMS----:")
-            if types["veg"]:
-                for item in types["veg"]:
-                    print(f"{item['id']:>2}. {item['name']:<25} ₹{item['half_price']}/{item['full_price']}")
-            else:
-                print("   No Veg items available")
+            for item in items:
+                item_id = str(item.get('id', 'N/A')).ljust(2)
+                name = str(item.get('name', 'N/A')).ljust(20)
+                half_price = f"₹{str(item.get('half_price', 'N/A'))}".ljust(8)
+                full_price = f"₹{str(item.get('full_price', 'N/A'))}".ljust(8)
 
-    
-            print("\n----NON-VEG ITEMS----:")
-            if types["nonveg"]:
-                for item in types["nonveg"]:
-                    print(f"{item['id']:>2}. {item['name']:<25} ₹{item['half_price']}/{item['full_price']}")
-            else:
-                print("   No Non-Veg items available")
+                print(f"| {item_id} | {name} | {half_price} | {full_price} |")
 
-            print("\n" + "-"*50)
+            print("+----+----------------------+----------+----------+")
 
-        print("\n" + "="*50)
-        print("Half / Full prices shown as: ₹Half / ₹Full")
-        print("="*50)
+        except Exception as e:
+            self.logger.log_error(f"ViewMenu.print_table Error: {str(e)}")
+            print("Error printing table. Check log for details.")

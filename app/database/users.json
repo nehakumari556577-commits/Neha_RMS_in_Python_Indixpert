@@ -1,16 +1,80 @@
 [
     {
-        "user_id": "8f7a373c-1f8f-4cee-8f82-8cc8e360419b",
-        "name": "nehakumari",
-        "email": "nrha@gmail.com",
-        "password": "neha123",
+        "user_id": "b419dd31-6050-42c9-ac4b-0da792fee5a9",
+        "name": "neha",
+        "email": "neha@gmail.com",
+        "password": "1234567",
         "role": "staff"
     },
     {
-        "user_id": "b8a23bbc-892c-47af-b509-e8a59efcc657",
-        "name": "goldy",
-        "email": "goldy@gmail.com",
-        "password": "goldy123",
+        "user_id": "52d04847-08ea-4dfd-b2f0-f0577b138b37",
+        "name": "saloni",
+        "email": "saloni@gmail.com",
+        "password": "saloni123",
+        "role": "staff"
+    },
+    {
+        "user_id": "1796653c-db1b-45ce-8f8b-b8f0dd5e61ad",
+        "name": "sunaina",
+        "email": "sunaina@gmail.com",
+        "password": "sunaina123",
+        "role": "admin"
+    },
+    {
+        "user_id": "776513ce-7b0a-4581-82c3-6934ca867119",
+        "name": "babli",
+        "email": "babli@gmail.com",
+        "password": "babli123",
+        "role": "admin"
+    },
+    {
+        "user_id": "4954c743-2287-43eb-a4ac-95bf95a8183d",
+        "name": "saloni",
+        "email": "sloni@gmail.com",
+        "password": "123456",
+        "role": "staff"
+    },
+    {
+        "user_id": "3d72526f-dba1-44ef-94a4-9e17b503363d",
+        "name": "shajiya",
+        "email": "shajiya@gmail.com",
+        "password": "shajiya123",
+        "role": "staff"
+    },
+    {
+        "user_id": "c5645add-50ea-47d0-8fb5-c6cdaf0623da",
+        "name": "vibha",
+        "email": "vibha@gmail.com",
+        "password": "vibha12",
+        "role": "admin"
+    },
+    {
+        "user_id": "b4de9a03-ddc7-452e-bb97-67bf4542031a",
+        "name": "ziya",
+        "email": "ziya@gmail.com",
+        "password": "ziya123",
+        "role": "staff"
+    },
+    {
+        "user_id": "ed1e1591-1d3c-48dd-9863-1d203efef902",
+        "name": "prity",
+        "email": "prity@gmail.com",
+        "password": "prity123",
+        "role": "staff"
+    },
+    {
+        "user_id": "eb5c8cd8-6966-4168-8504-427f521a1fb4",
+        "name": "sufiya",
+        "email": "sufiya@gmail.com",
+        "password": "sufiya123",
+        "role": "staff"
+    },
+    {
+        "user_id": "f85a793e-75ca-4fcb-bf72-25d9779e4424",
+        "name": "supriya",
+        "email": "supriya@gmail.com",
+        "password": "1234567",
         "role": "staff"
     }
+   
 ]

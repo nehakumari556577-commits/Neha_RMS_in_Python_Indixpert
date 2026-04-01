@@ -1,0 +1,215 @@
+[
+    {
+        "order_id": 11,
+        "staff": "vibha",
+        "time": "2026-03-31 11:29:37",
+        "items": [
+            {
+                "item_id": 4,
+                "name": "Veg Pulao",
+                "size": "Full",
+                "price": 80,
+                "quantity": 1,
+                "total": 80
+            }
+        ],
+        "total": 80,
+        "status": "Pending"
+    },
+    {
+        "order_id": 12,
+        "staff": "prity",
+        "time": "2026-03-31 15:04:05",
+        "items": [
+            {
+                "item_id": 4,
+                "name": "Veg Pulao",
+                "size": "Half",
+                "price": 60,
+                "quantity": 2,
+                "total": 120
+            }
+        ],
+        "total": 120,
+        "status": "Pending"
+    },
+    {
+        "order_id": 13,
+        "staff": "neha",
+        "time": "2026-03-31 18:53:38",
+        "items": [
+            {
+                "item_id": 4,
+                "name": "Veg Pulao",
+                "size": "Full",
+                "price": 80,
+                "quantity": 3,
+                "total": 240
+            }
+        ],
+        "total": 240,
+        "status": "Pending"
+    },
+    {
+        "order_id": 14,
+        "staff": "sunaina",
+        "time": "2026-03-31 22:08:51",
+        "items": [
+            {
+                "item_id": 6,
+                "name": "Chole Bhature",
+                "size": "Full",
+                "price": 90,
+                "quantity": 2,
+                "total": 180
+            },
+            {
+                "item_id": 7,
+                "name": "Rajma Chawal",
+                "size": "Half",
+                "price": 60,
+                "quantity": 2,
+                "total": 120
+            }
+        ],
+        "total": 300,
+        "status": "Pending"
+    },
+    {
+        "order_id": 15,
+        "staff": "saloni",
+        "time": "2026-03-31 22:23:20",
+        "items": [
+            {
+                "item_id": 4,
+                "name": "chilli paneer",
+                "size": "Full",
+                "price": 250,
+                "quantity": 3,
+                "total": 750
+            },
+            {
+                "item_id": 9,
+                "name": "Chicken Curry",
+                "size": "Full",
+                "price": 150,
+                "quantity": 1,
+                "total": 150
+            }
+        ],
+        "total": 900,
+        "status": "Pending",
+        "payment_method": "Card"
+    },
+    {
+        "order_id": 16,
+        "staff": "neha",
+        "time": "2026-03-31 22:39:06",
+        "items": [
+            {
+                "item_id": 7,
+                "name": "Rajma Chawal",
+                "size": "Full",
+                "price": 85,
+                "quantity": 2,
+                "total": 170
+            },
+            {
+                "item_id": 8,
+                "name": "Veg Thali",
+                "size": "Half",
+                "price": 70,
+                "quantity": 3,
+                "total": 210
+            }
+        ],
+        "total": 380,
+        "status": "Pending",
+        "payment_method": null,
+        "payment_time": null
+    },
+    {
+        "order_id": 17,
+        "staff": "babli",
+        "time": "2026-03-31 22:46:14",
+        "items": [
+            {
+                "item_id": 4,
+                "name": "chilli paneer",
+                "size": "Full",
+                "price": 250,
+                "quantity": 3,
+                "total": 750
+            },
+            {
+                "item_id": 7,
+                "name": "Rajma Chawal",
+                "size": "Half",
+                "price": 60,
+                "quantity": 6,
+                "total": 360
+            }
+        ],
+        "total": 1110,
+        "status": "Pending",
+        "payment_method": null,
+        "payment_time": null
+    },
+    {
+        "order_id": 18,
+        "staff": "saloni",
+        "time": "2026-04-01 05:33:50",
+        "items": [
+            {
+                "item_id": 7,
+                "name": "Rajma Chawal",
+                "size": "Full",
+                "price": 85,
+                "quantity": 2,
+                "total": 170
+            }
+        ],
+        "total": 170,
+        "status": "Pending",
+        "payment_method": null,
+        "payment_time": null
+    },
+    {
+        "order_id": 19,
+        "staff": "neha",
+        "time": "2026-04-01 05:44:18",
+        "items": [
+            {
+                "item_id": 5,
+                "name": "chhole bhature",
+                "size": "Half",
+                "price": 20,
+                "quantity": 2,
+                "total": 40
+            }
+        ],
+        "total": 40,
+        "status": "Pending",
+        "payment_method": null,
+        "payment_time": null
+    },
+    {
+        "order_id": 20,
+        "staff": "vibha",
+        "time": "2026-04-01 05:47:57",
+        "items": [
+            {
+                "item_id": 8,
+                "name": "Veg Thali",
+                "size": "Half",
+                "price": 70,
+                "quantity": 2,
+                "total": 140
+            }
+        ],
+        "total": 140,
+        "status": "Pending",
+        "payment_method": null,
+        "payment_time": null
+    }
+]
